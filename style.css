@@ -7,10 +7,15 @@
 
 
 
-
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 body{
     margin: 0;
     padding: 0;
+    width: 100%;
     background-color: var(--bc-color);
     color: rgb(15, 15, 15);
     font-family: "Lato", sans-serif;
@@ -64,7 +69,7 @@ ul:hover{
     z-index: 100;
 }
 .cicon{
-    height: 35px;
+    height: 25px;
     margin-right: 3px;
     padding: 4px;
     border-radius: 50px;
@@ -186,11 +191,11 @@ ul:hover{
 .cardPage{
     place-items: center;
     min-height: fit-content;
-    /* max-width: 100%; */
+    width: 100%;
     background-color: rgb(0, 0, 0);
     color: #ffffff;
     margin: 0;
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'Utendo', sans-serif;
 }
 .cards{
@@ -201,7 +206,7 @@ ul:hover{
     gap: 85px;
     padding: 35px 35px;
     height: fit-content;
-    /* width: fit-content; */
+    width: fit-content;
     min-height: fit-content;
     margin: 30px;
     border-radius: 10px;
@@ -209,7 +214,7 @@ ul:hover{
 }
 .card{
     height: fit-content;
-    width: 380px;
+    width: 320px;
     border-radius: 15px;
 }
 .frame{
@@ -220,7 +225,7 @@ ul:hover{
     height: 420px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0px 0px 45px 10px var(--bgshad);
+    box-shadow: 0px 0px 35px 5px var(--bgshad);
     border: 5px solid var(--bgshad);
     z-index: 0;
 }
@@ -240,7 +245,6 @@ ul:hover{
     justify-content: center;
     position: relative;
     top: 0; left: 0;
-    font-style: 1000px;
     height: 100px;
     width: 102.3%;
     z-index: 50;
@@ -278,10 +282,11 @@ ul:hover{
     content: "";
     place-content: center;
     position: absolute;
-    left: 240px;
-    top: -55px;
+    left: 239px;
+    top: -55.5px;
     border-top: 56px solid transparent;
     border-left: 55px solid var(--bgmsg);
+    z-index: -10;
 }
 
 .msg .hh2{
@@ -352,7 +357,7 @@ ul:hover{
 ::-webkit-scrollbar{
     display: none;
 }
-.fake-scrollbar {
+/* .fake-scrollbar {
     position: fixed;
     top: 0;
     right: 5px;
@@ -369,7 +374,7 @@ ul:hover{
     background: rgb(255, 255, 255);
     border-radius: 10px;
     mix-blend-mode: difference;
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
-}
+} */
