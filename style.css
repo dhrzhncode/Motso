@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato&display=swap');
 @import url('https://fonts.cdnfonts.com/css/arriere-garde');
-@import url('https://fonts.cdnfonts.com/css/steelfish-rounded');
-@import url('https://fonts.cdnfonts.com/css/doumbar');
 @import url('https://fonts.cdnfonts.com/css/moldyen');
-@import url('https://fonts.cdnfonts.com/css/utendo');
+@import url('https://fonts.cdnfonts.com/css/br-shape');
+@import url('https://fonts.cdnfonts.com/css/akshar');
 
 
 
@@ -15,11 +13,11 @@ html{
 body{
     margin: 0;
     padding: 0;
-    width: 100%;
     background-color: var(--bc-color);
     color: rgb(15, 15, 15);
     font-family: "Lato", sans-serif;
     --bc-color: rgb(245, 245, 245);
+    overflow-x: clip;
 }
 
 #navigation{
@@ -70,7 +68,7 @@ ul:hover{
 }
 .cicon{
     height: 25px;
-    margin-right: 3px;
+    margin-right: 5px;
     padding: 4px;
     border-radius: 50px;
     transform: rotate(90deg);
@@ -185,9 +183,6 @@ ul:hover{
 }
 
 
-
-
-
 .cardPage{
     place-items: center;
     min-height: fit-content;
@@ -195,10 +190,9 @@ ul:hover{
     background-color: rgb(0, 0, 0);
     color: #ffffff;
     margin: 0;
-    font-size: 25px;
-    font-family: 'Utendo', sans-serif;
 }
 .cards{
+    font-size: 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -213,16 +207,24 @@ ul:hover{
     z-index: 50;
 }
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
     height: fit-content;
-    width: 320px;
+    width: 350px;
     border-radius: 15px;
 }
 .frame{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 420px;
+    height: 380px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 0px 35px 5px var(--bgshad);
@@ -238,6 +240,11 @@ ul:hover{
     position: absolute;
     height: 100%;
     right: -70px;
+}
+.txth3{
+    font-size: 85px;
+    padding-top: 50px;
+    font-family: 'BR Shape', sans-serif;
 }
 .txth2{
     display: flex;
@@ -256,6 +263,7 @@ ul:hover{
     place-items: center;
     margin: 0 10%;
     width: 80%;
+    overflow: hidden;
 }
 .msg{
     position: relative;
@@ -263,29 +271,32 @@ ul:hover{
     min-width: 200px;
     margin: 20px 0;
     margin-top: 100px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     background-color: #dbdbdb;
     --bgmsg: rgb(66, 66, 66) ;
-    font-family: 'Utendo', sans-serif;
+    font-family: 'BR Shape', sans-serif;
+    border-radius: 0px 25px 0px 25px;
 }
 .msg::before{
     content: "";
     place-content: center;
     padding-left: 20px ;
-    height: 55px;
+    height: 85px;
     width: 220px;
     position: absolute;
     left: 0;
     top: -55px;
     background-color: var(--bgmsg);
+    border-radius: 25px 0px 0px 30px;
 }.msg::after{
     content: "";
     place-content: center;
     position: absolute;
     left: 239px;
-    top: -55.5px;
+    top: -55px;
     border-top: 56px solid transparent;
     border-left: 55px solid var(--bgmsg);
+    outline: none;
     z-index: -10;
 }
 
@@ -299,7 +310,7 @@ ul:hover{
 }
 .msg p{
     margin: 0;
-    padding: 10px 20px 5px 20px;
+    padding: 15px 30px 5px 30px;
 }
 .msg .img{
     position: relative;
@@ -309,7 +320,8 @@ ul:hover{
     width: 100%;
     height: 150px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-radius: 0px 25px 0px 25px;
     img{
         width: 100%;
         position: absolute;
@@ -357,7 +369,7 @@ ul:hover{
 ::-webkit-scrollbar{
     display: none;
 }
-/* .fake-scrollbar {
+.fake-scrollbar {
     position: fixed;
     top: 0;
     right: 5px;
@@ -377,4 +389,24 @@ ul:hover{
     position: absolute;
     top: 0;
     left: 0;
-} */
+}
+
+@media  (max-width:400px) {
+    .cardPage{
+        font-size: 10px;
+    }
+    .frame{
+        width: 280px;
+        height: 300px;
+    }.cards{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 25px;
+    }
+    .txth3{
+        font-size: 65px;
+    }
+}
